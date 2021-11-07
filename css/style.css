@@ -1,0 +1,15 @@
+body {
+  background: #f8f9fa !important;
+}
+
+@media (max-width: 1023px) {
+  #main-footer {
+    position: initial !important;
+  }
+}
+
+@media (max-height: 1023px) {
+  #main-footer {
+    position: initial !important;
+  }
+}

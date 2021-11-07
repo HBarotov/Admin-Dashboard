@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Barootv Hojiakbar">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>SomeMedia Admin Page</title>
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark p-0">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand">SomeMedia</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./posts.html" class="nav-link">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./categories.html" class="nav-link">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./users.html" class="nav-link">Users</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#!" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-user"></i> Welcome!
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="./profile.html" class="dropdown-item">
+                                <i class="fas fa-user-circle"></i> Profiles
+                            </a>
+                            <a href="./settings.html" class="dropdown-item">
+                                <i class="fas fa-cog"></i> Settings
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./login.html" class="nav-link">
+                            <i class="fas fa-user-times"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="main-header" class="py-2 bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1><i class="fas fa-file-alt"></i> Post One</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Actions -->
+        <section id="actions" class="py-4">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-3"> 
+                        <a href="./index.html" class="btn btn-light btn-block">
+                            <i class="fas fa-arrow-left"></i> Back To Dashboard
+                        </a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="./index.html" class="btn btn-success btn-block">
+                            <i class="fas fa-check"></i> Save Changes
+                        </a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="./index.html" class="btn btn-danger btn-block">
+                            <i class="fas fa-trash"></i> Delete Post
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details -->
+        <section class="py-5" id="details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Edit Post</h4>
+                            </div>
+
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="postTitle">Title</label>
+                                        <input name="postTitle" id="postTitle" type="text" placeholder="Title" class="form-control" required value="Post One">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postCategory">Category</label>
+                                        <select name="postCategory" id="postCategory" class="form-control">
+                                            <option value="Web Development" selected>Web Development</option>
+                                            <option value="Software Engineering">Software Engineering</option>
+                                            <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                            <option value="Cyber Security">Cyber Security</option>
+                                            <option value="Project Management">Project Management</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postImage">Upload Image</label>
+                                        <div class="custom-file">
+                                            <input type="file" name="postImage" class="custom-file-input" id="postImage">
+                                            <label for="postImage" class="custom-file-label">Choose Image</label>
+                                        </div>
+                                        <small class="form-text text-muted">Max Size 3MB</small>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="postBody">Content</label>
+                                        <textarea name="editor1" class="form-control" id="postBody">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam vitae debitis quidem molestias sit temporibus qui nihil, voluptatum quod doloremque tempore autem, ut suscipit adipisci sequi nam libero, sapiente similique ipsa excepturi delectus! Nihil vitae esse laudantium non alias maxime velit commodi, distinctio reiciendis optio at sed laboriosam incidunt eos?</textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-dark text-white text-center mt-5 py-3 fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="lead mb-0">
+                        Copyright &copy; <span id="year"></span>; SomeMedia <br>
+                        All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear());
+
+        // Init A Wizzy Wig Editor
+        CKEDITOR.replace( 'editor1' );
+    </script>
+</body>
+</html>
